@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KURO MAKI — Makis & Alitas</title>
+  <meta name="description" content="KURO MAKI: makis y alitas con sabor y estilo. Pide por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span>KURO</span> MAKI</a>
+    <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#promos">Promos</a>
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-pill" id="openCart">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content wrap">
+        <span class="eyebrow">SABOR CALLEJERO · ESTILO KURO</span>
+        <h1>MAKIS.<br><span>ALITAS.</span><br>KURO.</h1>
+        <p>Makis con carácter, alitas llenas de sabor y combinaciones hechas al momento. Todo el estilo de KURO en un solo lugar.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#menu">Ver menú</a>
+          <a class="btn ghost" href="https://wa.me/51926138246" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        </div>
+        <div class="hero-badges">
+          <span>🔥 Hecho al momento</span>
+          <span>📍 El Agustino</span>
+          <span>📲 Pedido directo</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-label">DESTACADO</div>
+        <h3>MAKI PIZZA</h3>
+        <p>Una combinación diferente, cremosa y llena de sabor. El nuevo favorito de KURO.</p>
+        <strong>S/ 18</strong>
+      </div>
+    </section>
+
+    <section id="promos" class="section wrap">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">PROMOS</span>
+          <h2>Promos que sí provocan</h2>
+        </div>
+        <p>Precios pensados para pedir solo, en pareja o compartir.</p>
+      </div>
+
+      <div class="promo-grid">
+        <article class="promo promo-main">
+          <div class="promo-content">
+            <span class="promo-tag">MÁS PEDIDA</span>
+            <h3>Combo Kuro</h3>
+            <p>2 tablas de makis + 1 porción de alitas.</p>
+            <div class="promo-bottom"><strong>S/ 45</strong><button onclick="addToCart('Combo Kuro',45)">Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="promo promo-duo">
+          <div class="promo-content">
+            <span class="promo-tag">PARA DOS</span>
+            <h3>Dúo Maki</h3>
+            <p>Dos tablas para compartir.</p>
+            <div class="promo-bottom"><strong>S/ 27.90</strong><button onclick="addToCart('Dúo Maki',27.9)">Agregar</button></div>
+          </div>
+        </article>
+
+        <article class="promo promo-mix">
+          <div class="promo-content">
+            <span class="promo-tag">MIX</span>
+            <h3>Maki + Alitas</h3>
+            <p>Una tabla de makis y una porción de alitas.</p>
+            <div class="promo-bottom"><strong>S/ 30</strong><button onclick="addToCart('Maki + Alitas',30)">Agregar</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="menu" class="section section-dark">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">NUESTRA CARTA</span>
+            <h2>Elige tu antojo</h2>
+          </div>
+          <div class="filters">
+            <button class="filter active" data-filter="all">Todo</button>
+            <button class="filter" data-filter="makis">Makis</button>
+            <button class="filter" data-filter="alitas">Alitas</button>
+                      </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <article class="menu-card makis">
+            <div class="food-img img-acevichado"><span>Acevichado</span></div>
+            <div class="menu-card-body"><div><small>MAKI</small><h3>Maki Acevichado</h3><p>Palta y langostino por dentro, pescado y salsa acevichada por fuera.</p></div><div class="menu-price"><strong>S/ 15</strong><button onclick="addToCart('Maki Acevichado',15)">+</button></div></div>
+          </article>
+          <article class="menu-card makis">
+            <div class="food-img img-furai"><span>Furai</span></div>
+            <div class="menu-card-body"><div><small>MAKI</small><h3>Maki Furai</h3><p>Langostino, palta y queso crema en un roll crujiente.</p></div><div class="menu-price"><strong>S/ 15</strong><button onclick="addToCart('Maki Furai',15)">+</button></div></div>
+          </article>
+          <article class="menu-card makis">
+            <div class="food-img img-california"><span>California</span></div>
+            <div class="menu-card-body"><div><small>MAKI</small><h3>California</h3><p>Kiuri, langostino y queso crema.</p></div><div class="menu-price"><strong>S/ 15</strong><button onclick="addToCart('Maki California',15)">+</button></div></div>
+          </article>
+          <article class="menu-card makis featured-card">
+            <div class="food-img img-pizza"><span>Maki Pizza</span></div>
+            <div class="menu-card-body"><div><small>NUEVO · MAKI</small><h3>Maki Pizza</h3><p>Una propuesta especial de KURO para quienes quieren probar algo diferente.</p></div><div class="menu-price"><strong>S/ 18</strong><button onclick="addToCart('Maki Pizza',18)">+</button></div></div>
+          </article>
+          <article class="menu-card alitas">
+            <div class="food-img img-wings"><span>Acevichadas</span></div>
+            <div class="menu-card-body"><div><small>ALITAS</small><h3>Alitas Acevichadas</h3><p>Porción de alitas bañadas en salsa acevichada. Incluye papas al orégano.</p></div><div class="menu-price"><strong>S/ 18</strong><button onclick="addToCart('Alitas Acevichadas',18)">+</button></div></div>
+          </article>
+          <article class="menu-card alitas">
+            <div class="food-img img-bbq"><span>BBQ</span></div>
+            <div class="menu-card-body"><div><small>ALITAS</small><h3>Alitas BBQ</h3><p>Alitas glaseadas con BBQ. Incluye papas al orégano.</p></div><div class="menu-price"><strong>S/ 18</strong><button onclick="addToCart('Alitas BBQ',18)">+</button></div></div>
+          </article>
+          <article class="menu-card alitas">
+            <div class="food-img img-maracuya"><span>Maracuyá</span></div>
+            <div class="menu-card-body"><div><small>ALITAS</small><h3>Alitas Maracuyá</h3><p>Toque dulce y ácido. Incluye papas al orégano.</p></div><div class="menu-price"><strong>S/ 18</strong><button onclick="addToCart('Alitas Maracuyá',18)">+</button></div></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="story">
+      <div class="story-copy wrap">
+        <span class="eyebrow">KURO MAKI</span>
+        <h2>Cocina con calle,<br><span>producto con carácter.</span></h2>
+        <p>Nos gusta servir porciones que provoquen, sabores directos y una carta fácil de pedir. Nada de complicaciones: eliges, agregas al carrito y mandas tu pedido por WhatsApp.</p>
+        <a class="btn primary" href="#contacto">Quiero pedir</a>
+      </div>
+    </section>
+
+    <section id="contacto" class="section wrap contact-section">
+      <div class="contact-panel">
+        <div><span class="eyebrow">PEDIDOS</span><h2>¿Tienes hambre?</h2><p>Haz tu pedido y envíalo directo por WhatsApp.</p></div>
+        <div class="contact-links">
+          <a href="https://wa.me/51926138246" target="_blank" rel="noopener">📲 926 138 246</a>
+          <a href="https://instagram.com/kuro_maki_pe" target="_blank" rel="noopener">📸 @kuro_maki_pe</a>
+          <span>📍 El Agustino, Lima</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div class="brand"><span>KURO</span> MAKI</div>
+      <p>© 2026 KURO MAKI. Hecho para vender más rico.</p>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay">
+    <aside class="cart-drawer">
+      <div class="cart-head"><h3>Tu pedido</h3><button id="closeCart">✕</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-foot"><div class="cart-total"><span>Total</span><strong id="cartTotal">S/ 0.00</strong></div><button class="whatsapp-btn" onclick="sendOrder()">Enviar pedido por WhatsApp</button></div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
